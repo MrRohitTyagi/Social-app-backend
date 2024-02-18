@@ -1,12 +1,8 @@
-const express = require("express");
+import { app } from "./app.js";
+import { connectToDatabase } from "./config/db.js";
 
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send();
-});
+connectToDatabase();
 
 app.listen(5000, () => {
-  console.clear();
   console.log("server running at port 5000");
 });
