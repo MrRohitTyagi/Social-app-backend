@@ -1,6 +1,6 @@
 {
   "name": "social_app_backend",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "this is the backend of my socialmedia app",
   "main": "index.js",
   "scripts": {

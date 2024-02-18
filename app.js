@@ -4,6 +4,7 @@ import userRoutes from "./Routes/userRoutes.js";
 
 import dotenv from "dotenv";
 import { verifyToken } from "./middlewares/middleware.js";
+import { login } from "./Controllers/loginController.js";
 dotenv.config({ path: "./.env" });
 
 const app = express();
@@ -14,6 +15,11 @@ app.options("*", cors());
 app.get("/", (req, res) => res.send({ success: true }));
 
 //Routes
+
+// Login Route
+app.post("/login", login);
+
+// User Route
 
 app.use("/user/", userRoutes);
 
